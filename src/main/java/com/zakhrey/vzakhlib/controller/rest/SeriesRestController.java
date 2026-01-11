@@ -17,11 +17,11 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/series")
-public class SeriesController {
+public class SeriesRestController {
 
     private final SeriesService seriesService;
 
-    public SeriesController(SeriesService seriesService) {
+    public SeriesRestController(SeriesService seriesService) {
         this.seriesService = seriesService;
     }
 

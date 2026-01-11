@@ -19,7 +19,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/v1/genres")
 @RequiredArgsConstructor
-public class GenreControllerRest {
+public class GenreRestController {
     
     private final GenreService genreService;
     
