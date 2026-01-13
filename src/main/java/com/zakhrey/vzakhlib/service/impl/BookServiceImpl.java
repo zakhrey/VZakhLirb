@@ -50,7 +50,7 @@ public class BookServiceImpl implements BookService {
         Book book = Book.builder()
             .name(request.getName())
             .description(request.getDescription())
-            .language(Language.valueOf(request.getLanguage().toUpperCase()))
+            .language(request.getLanguage())
             .fileLink(request.getFileLink())
             .genres(new HashSet<>())
             .build();

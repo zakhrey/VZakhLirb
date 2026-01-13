@@ -48,7 +48,7 @@ public class SeriesRestController {
      */
     @GetMapping
     public ResponseEntity<PageResponse<SeriesDto>> getAllSeries(
-            @PageableDefault(size = 20, sort = "title") Pageable pageable) {
+            @PageableDefault(size = 20, sort = "name") Pageable pageable) {
         PageResponse<SeriesDto> seriesPage = seriesService.getAllSeries(pageable);
         return ResponseEntity.ok(seriesPage);
     }
@@ -88,7 +88,7 @@ public class SeriesRestController {
     @GetMapping("/{seriesId}/books")
     public ResponseEntity<PageResponse<BookDto>> getSeriesWithBooks(
             @PathVariable UUID seriesId,
-            @PageableDefault(size = 20, sort = "publicationYear") Pageable pageable) {
+            @PageableDefault(size = 20) Pageable pageable) {
         PageResponse<BookDto> booksPage = seriesService.getSeriesWithBooks(seriesId, pageable);
         return ResponseEntity.ok(booksPage);
     }

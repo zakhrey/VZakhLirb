@@ -1,5 +1,6 @@
 package com.zakhrey.vzakhlib.model.request;
 
+import com.zakhrey.vzakhlib.entity.Language;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -19,7 +20,7 @@ public class BookCreateRequest {
     private UUID seriesId;
     
     @NotBlank(message = "Язык книги обязателен")
-    private String language;
+    private Language language;
     
     @Size(max = 512, message = "Ссылка на файл не должна превышать 512 символов")
     private String fileLink;
